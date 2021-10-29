@@ -4,7 +4,7 @@ const tourOffer = [
             name: "Paris Hill Tour",
             TourCost: "2000",
             rating: "1.2K+Rating",
-            image: "https://i.ibb.co/tqRvSjS/p-1.jpg",
+            image: "https://i.ibb.co/X4VGKDr/p-01.jpg",
             description: "Adventure may hurt you but monotony will kill you.",
         },
         {

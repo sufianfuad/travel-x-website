@@ -15,7 +15,7 @@ const TourOffers = () => {
         <div className="tourOffer-container">
             <div className="text-center pb-3">
                 <div className="offer-title">
-                    <h2>Choose Your Package</h2>
+                    <p>Choose Our Offer Package</p>
                 </div>
             </div>
             <div className="container">
