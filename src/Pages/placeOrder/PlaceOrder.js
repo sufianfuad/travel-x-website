@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { useForm } from "react-hook-form";
+
 import './PlaceOrder.css';
 const PlaceOrder = () => {
     const { bookingId } = useParams();
@@ -7,9 +9,14 @@ const PlaceOrder = () => {
     const [bookingDetails, setBookingDetails] = useState([]);
     const [order, setOrder] = useState({});
 
+    const { register, handleSubmit } = useForm();
+    const onSubmit = data => {
+        console.log(data)
+    };
+
     // //data load
     useEffect(() => {
-        fetch('/tourOffer.json')
+        fetch('http://localhost:7000/tourOffers')
             .then(res => res.json())
             .then(data => setBookingDetails(data))
     }, []);
@@ -29,11 +36,14 @@ const PlaceOrder = () => {
                     <div className="clo-lg-6 col-md-6 col-12">
                         <div className="details-container">
                             <div className="order-box">
-                                <h2>Confirm your Order</h2>
+                                <form onSubmit={handleSubmit(onSubmit)}>
+                                    <input {...register("name", { required: true, maxLength: 20 })} placeholder="Name" />
+                                    <input {...register("email")} placeholder="Give your Email" />
+                                    <input type="text" {...register("Address")} placeholder="Address" />
+                                    <input type="submit" value="Place Order" />
+                                </form>
                             </div>
                         </div>
-
-
                     </div>
                     <div className="clo-lg-6 col-md-6 col-12">
                         <div className="details-container">
@@ -54,9 +64,7 @@ const PlaceOrder = () => {
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
     );
 };

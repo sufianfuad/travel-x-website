@@ -19,7 +19,6 @@ const Header = () => {
                         <Nav.Link as={Link} to="/addTour">Add Tour</Nav.Link>
                         {/* <Nav.Link as={Link} to="/about">About</Nav.Link>
                         <Nav.Link as={Link} to="/contact">Contact</Nav.Link> */}
-
                         {user?.email ?
                             <button
                                 onClick={logOut}
@@ -31,10 +30,12 @@ const Header = () => {
                                 to="/login"
                             >Login</Nav.Link>
                         }
+                        <Nav.Link as={Link} to="/dashBoard">Dashboard</Nav.Link>
                         <Navbar.Text>
                             {user?.email &&
-                                <span className="">Profile: <a href="#login">{user?.displayName}</a></span>
+                                <span className="me-2">Profile: <a href="#login">{user?.displayName}</a></span>
                             }
+                            <span><img className="profile" src={user?.photoURL} alt="" /></span>
 
                         </Navbar.Text>
                     </Navbar.Collapse>

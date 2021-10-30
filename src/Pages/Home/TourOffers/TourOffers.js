@@ -7,7 +7,7 @@ const TourOffers = () => {
     const [tourOffers, setTourOffers] = useState([]);
 
     useEffect(() => {
-        fetch('./tourOffer.json')
+        fetch('http://localhost:7000/tourOffers')
             .then(res => res.json())
             .then(data => setTourOffers(data))
     }, [])

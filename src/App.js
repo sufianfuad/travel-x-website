@@ -13,12 +13,12 @@ import Login from './Pages/Login/Login/Login';
 import SignIn from './Pages/SignIn/SignIn';
 import NotFound from './Pages/NotFound/NotFound';
 import Footer from './Pages/Shared/Footer/Footer';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import ManageAllOrder from './Pages/ManageAllOrder/ManageAllOrder';
 import AddTourOffer from './Pages/AddTourOffer/AddTourOffer';
 import AuthProvider from './Context/AuthProvider';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 import PlaceOrder from './Pages/placeOrder/PlaceOrder';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 
 function App() {
@@ -44,26 +44,28 @@ function App() {
             <PrivateRoute exact path="/myOrders">
               <MyOrders></MyOrders>
             </PrivateRoute>
+
             {/* <Route path="/about">
             <About></About>
           </Route>
           <Route path="/contact">
             <Contact></Contact>
           </Route> */}
+
+            <PrivateRoute exact path="/placeOrder/:bookingId">
+              <PlaceOrder></PlaceOrder>
+            </PrivateRoute>
             <Route path="/manageOrders">
               <ManageAllOrder></ManageAllOrder>
             </Route>
-            <PrivateRoute path="/addTour">
+            <Route path="/addTour">
               <AddTourOffer></AddTourOffer>
-            </PrivateRoute>
+            </Route>
             <Route path="/login">
               <Login></Login>
             </Route>
             <Route path="/signin">
               <SignIn></SignIn>
-            </Route>
-            <Route exact path="/placeOrder/:bookingId">
-              <PlaceOrder></PlaceOrder>
             </Route>
             <Route path="*">
               <NotFound></NotFound>

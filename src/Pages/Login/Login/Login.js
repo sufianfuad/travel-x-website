@@ -21,10 +21,13 @@ const Login = () => {
     }
     return (
         <div className="login-container">
-            <h2>Please Login</h2>
-            <button
-                onClick={handleGoogleSignIn}
-                className="btn btn-warning">Sign In With Google</button>
+            <h2 className="text-center">Please Login</h2>
+            <div className="text-center">
+                <button
+                    onClick={handleGoogleSignIn}
+                    className=" btn btn-warning">Sign In With Google</button>
+            </div>
+
         </div>
     );
 };
