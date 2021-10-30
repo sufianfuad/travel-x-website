@@ -17,7 +17,7 @@ const SingleOffers = ({ offer }) => {
                     <p>{description}</p>
                 </div>
                 <div className="booking-btn">
-                    <Link to="/myOrders">
+                    <Link to={`/placeOrder/${id}`}>
                         <button className="btn btn-primary">Book Now</button>
                     </Link>
 

@@ -18,11 +18,12 @@ import ManageAllOrder from './Pages/ManageAllOrder/ManageAllOrder';
 import AddTourOffer from './Pages/AddTourOffer/AddTourOffer';
 import AuthProvider from './Context/AuthProvider';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
+import PlaceOrder from './Pages/placeOrder/PlaceOrder';
 
 
 function App() {
   return (
-    <div className="App">
+    <div className="">
 
       <AuthProvider>
         <Router>
@@ -60,6 +61,9 @@ function App() {
             </Route>
             <Route path="/signin">
               <SignIn></SignIn>
+            </Route>
+            <Route exact path="/placeOrder/:bookingId">
+              <PlaceOrder></PlaceOrder>
             </Route>
             <Route path="*">
               <NotFound></NotFound>

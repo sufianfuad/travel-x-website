@@ -1,0 +1,23 @@
+.placeOrder-container{
+    padding: 50px 0;
+}
+.order-box{
+    height: 500px;
+    border:1px solid gray;
+}
+.details-container{
+    padding: 30px 0;
+}
+.placeOrder-details{
+    height: 500px;
+    width: 450px;
+    margin: 0 auto;
+    padding: 10px;
+    /* border: 2px solid gray; */
+    box-shadow: 5px 5px 10px rgba(143, 219, 228, 0.781);
+}
+
+
+.order-img img{
+    width: 100%;
+}
