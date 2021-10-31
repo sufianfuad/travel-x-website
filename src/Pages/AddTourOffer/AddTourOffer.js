@@ -27,9 +27,9 @@ const AddTourOffer = () => {
                     <textarea {...register("description")} placeholder="description" />
 
                     <input type="number" {...register("TourCost")} placeholder="TourCost" />
-                    <input type="text" {...register("rating")} placeholder="rating" />
+                    <input type="text" {...register("rating")} placeholder="rating(1.2k+rating)" />
 
-                    <input {...register("image")} placeholder="image url" />
+                    <input {...register("image")} placeholder="paste img url from image.js file" />
 
                     <input type="submit" />
                 </form>

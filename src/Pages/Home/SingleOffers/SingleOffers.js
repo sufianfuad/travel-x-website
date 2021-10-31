@@ -1,9 +1,12 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
 import './SingleOffers.css'
 
 const SingleOffers = ({ offer }) => {
     const { _id, name, TourCost, description, rating, image } = offer;
+    const element = <FontAwesomeIcon icon={faCoffee} />
     return (
         <div className="col-lg-3 col-md-3 col-12">
             <div className="offer-card">

@@ -10,7 +10,7 @@
     transition: 0.5s;
 }
 .form-container:hover{
-    background-color: lightskyblue;
+    background-color: #f0f0f0;
 }
 .form-container form{
     display: flex;

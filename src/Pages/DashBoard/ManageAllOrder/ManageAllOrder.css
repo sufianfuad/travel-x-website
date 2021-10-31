@@ -1,0 +1,11 @@
+.allOrder-container{
+    padding: 50px 0;
+}
+.delete-btn{
+    color: #fff;
+    font-weight: bold;
+    background-color: darkcyan;
+}
+.status{
+    color: crimson;
+}

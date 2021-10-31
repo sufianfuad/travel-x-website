@@ -3,15 +3,32 @@ import { useParams } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 
 import './PlaceOrder.css';
+import useAuth from '../../hooks/useAuth';
 const PlaceOrder = () => {
     const { bookingId } = useParams();
+    const { user } = useAuth();
 
     const [bookingDetails, setBookingDetails] = useState([]);
     // const [order, setOrder] = useState({});
 
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
+        data.status = 'pending';
         console.log(data)
+        fetch('http://localhost:7000/orders', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(result => {
+                if (result.insertedId) {
+                    alert('Your Order successfully processed')
+                    reset()
+                }
+            })
     };
 
     // //data load
@@ -29,8 +46,10 @@ const PlaceOrder = () => {
                         <div className="details-container">
                             <div className="order-box">
                                 <form onSubmit={handleSubmit(onSubmit)}>
-                                    <input {...register("name", { required: true, maxLength: 20 })} placeholder="Name" />
-                                    <input {...register("email")} placeholder="Give your Email" />
+                                    <input defaultValue={user?.displayName} {...register("name", { required: true, maxLength: 20 })} placeholder="Name" />
+                                    <input defaultValue={user?.email} {...register("email")} placeholder="Give your Email" />
+                                    <input type="text" {...register("tour_name")} placeholder="Tour Place Name" />
+                                    <input {...register("date")} type="date" />
                                     <input type="text" {...register("Address")} placeholder="Address" />
                                     <input type="submit" value="Place Order" />
                                 </form>

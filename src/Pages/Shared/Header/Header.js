@@ -15,10 +15,9 @@ const Header = () => {
                     <Navbar.Collapse className="justify-content-end">
                         <Nav.Link as={Link} to="/home">Home</Nav.Link>
                         <Nav.Link as={Link} to="/tourOffers">Tour Offers</Nav.Link>
-                        <Nav.Link as={Link} to="/manageOrders">ManageAll Orders</Nav.Link>
-                        <Nav.Link as={Link} to="/addTour">Add Tour</Nav.Link>
-                        {/* <Nav.Link as={Link} to="/about">About</Nav.Link>
-                        <Nav.Link as={Link} to="/contact">Contact</Nav.Link> */}
+                        <Nav.Link as={Link} to="/myOrders">My Orders</Nav.Link>
+                        <Nav.Link as={Link} to="/allOrder">Manage All Orders</Nav.Link>
+                        <Nav.Link as={Link} to="/addTour">Add New Tour</Nav.Link>
                         {user?.email ?
                             <button
                                 onClick={logOut}
@@ -30,12 +29,14 @@ const Header = () => {
                                 to="/login"
                             >Login</Nav.Link>
                         }
-                        <Nav.Link as={Link} to="/dashBoard">Dashboard</Nav.Link>
                         <Navbar.Text>
                             {user?.email &&
                                 <span className="me-2">Profile: <a href="#login">{user?.displayName}</a></span>
                             }
-                            <span><img className="profile" src={user?.photoURL} alt="" /></span>
+                            {user?.email &&
+                                <span><img className="profile" src={user?.photoURL} alt="" /></span>
+                            }
+
 
                         </Navbar.Text>
                     </Navbar.Collapse>
