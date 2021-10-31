@@ -16,6 +16,7 @@ const TourOffers = () => {
             <div className="text-center pb-3">
                 <div className="offer-title">
                     <p>Choose Our Offer Package</p>
+                    <h4 className="animate__animated animate__bounce">Select Your Best Package For Your Travel</h4>
                 </div>
             </div>
             <div className="container">

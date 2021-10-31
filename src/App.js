@@ -52,7 +52,7 @@ function App() {
             <Contact></Contact>
           </Route> */}
 
-            <PrivateRoute exact path="/placeOrder/:bookingId">
+            <PrivateRoute path="/placeOrder/:bookingId">
               <PlaceOrder></PlaceOrder>
             </PrivateRoute>
             <Route path="/manageOrders">

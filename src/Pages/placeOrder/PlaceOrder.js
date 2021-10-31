@@ -7,7 +7,7 @@ const PlaceOrder = () => {
     const { bookingId } = useParams();
 
     const [bookingDetails, setBookingDetails] = useState([]);
-    const [order, setOrder] = useState({});
+    // const [order, setOrder] = useState({});
 
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
@@ -16,18 +16,10 @@ const PlaceOrder = () => {
 
     // //data load
     useEffect(() => {
-        fetch('http://localhost:7000/tourOffers')
+        fetch(`http://localhost:7000/tourOffers/${bookingId}`)
             .then(res => res.json())
             .then(data => setBookingDetails(data))
     }, []);
-
-    useEffect(() => {
-        if (bookingDetails.length > 0) {
-            const selectedItem = bookingDetails.find(item => item?.id == bookingId)
-            setOrder(selectedItem);
-        }
-    }, [bookingDetails]);
-
     return (
         <div className="placeOrder-container">
             <div className="container">
@@ -49,14 +41,14 @@ const PlaceOrder = () => {
                         <div className="details-container">
                             <div className="placeOrder-details">
                                 <div className="order-img">
-                                    <img src={order?.image} alt="" />
+                                    <img src={bookingDetails?.image} alt="" />
                                 </div>
                                 <div className="details p-2">
-                                    <h4>You Choose {order?.name}</h4>
-                                    <p>{order?.description}</p>
+                                    <h4>You Choose {bookingDetails?.name}</h4>
+                                    <p>{bookingDetails?.description}</p>
                                     <div className="d-flex justify-content-between align-items-center">
-                                        <p><strong>Tour Package {order?.TourCost}$</strong> only.</p>
-                                        <p>Review : <strong>{order?.rating}</strong> </p>
+                                        <p><strong>Tour Package {bookingDetails?.TourCost}$</strong> only.</p>
+                                        <p>Review : <strong>{bookingDetails?.rating}</strong> </p>
                                     </div>
                                     <button className="btn btn-success px-3 py-2">Back Tour Offers</button>
                                 </div>

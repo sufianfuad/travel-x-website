@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './SingleOffers.css'
 
 const SingleOffers = ({ offer }) => {
-    const { id, name, TourCost, description, rating, image } = offer;
+    const { _id, name, TourCost, description, rating, image } = offer;
     return (
         <div className="col-lg-3 col-md-3 col-12">
             <div className="offer-card">
@@ -17,7 +17,7 @@ const SingleOffers = ({ offer }) => {
                     <p>{description}</p>
                 </div>
                 <div className="booking-btn">
-                    <Link to={`/placeOrder/${id}`}>
+                    <Link to={`/placeOrder/${_id}`}>
                         <button className="btn btn-primary">Book Now</button>
                     </Link>
 

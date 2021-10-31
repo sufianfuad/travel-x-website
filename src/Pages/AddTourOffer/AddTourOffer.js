@@ -10,8 +10,8 @@ const AddTourOffer = () => {
         axios.post('http://localhost:7000/tourOffers', data)
             .then(res => {
                 if (res.data.insertedId) {
-                    alert("Successfully Added");
-                    reset()
+                    alert('Successfully Added');
+                    reset();
                 }
             })
     };
