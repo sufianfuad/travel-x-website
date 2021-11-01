@@ -16,11 +16,15 @@ import AuthProvider from './Context/AuthProvider';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 import PlaceOrder from './Pages/placeOrder/PlaceOrder';
 import MyOrders from './Pages/DashBoard/MyOrders/MyOrders';
-import ManageAllOrder from './Pages/DashBoard/ManageAllOrder/ManageAllOrder'
-
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import ManageAllOrder from './Pages/DashBoard/ManageAllOrder/ManageAllOrder';
 import UpdateOrder from './Pages/DashBoard/UpdateOrder/UpdateOrder';
-
+import LatestBlogs from './Pages/LatestBlogs/LatestBlogs';
+// react router dom
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom';
 
 function App() {
   return (
@@ -28,6 +32,7 @@ function App() {
 
       <AuthProvider>
         <Router>
+          {/* header route  */}
           <Header></Header>
           <Switch>
 
@@ -58,12 +63,12 @@ function App() {
               <ManageAllOrder></ManageAllOrder>
             </PrivateRoute>
 
-            {/* <Route path="/about">
-            <About></About>
-          </Route>
-          <Route path="/contact">
-            <Contact></Contact>
-          </Route> */}
+            <Route path="/about">
+              <About></About>
+            </Route>
+            <Route path="/blogs">
+              <LatestBlogs></LatestBlogs>
+            </Route>
             <Route path="/login">
               <Login></Login>
             </Route>
@@ -78,6 +83,7 @@ function App() {
             </Route>
 
           </Switch>
+          {/* footer route  */}
           <Footer></Footer>
         </Router>
       </AuthProvider>

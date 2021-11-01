@@ -12,13 +12,30 @@ const MyOrders = () => {
 
 
     useEffect(() => {
-        if (user?.email) {
-            fetch('https://sleepy-basin-98132.herokuapp.com/orders')
-                .then(res => res.json())
-                .then(data => setOrders(data))
-        }
+        fetch('https://sleepy-basin-98132.herokuapp.com/orders')
+            .then(res => res.json())
+            .then(data => setOrders(data))
+
     }, [])
-    console.log(orders);
+    //Delete order
+    const handleDeleteOrder = id => {
+        const proceed = window.confirm('Are you sure, You want to delete your order')
+        if (proceed) {
+            const url = `https://sleepy-basin-98132.herokuapp.com/orders/${id}`;
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount > 0) {
+                        alert('Deleted Successfully')
+                        const remainingOrder = orders.filter(order => order._id !== id);
+                        setOrders(remainingOrder);
+                    }
+                });
+        }
+
+    }
     return (
         <div className="myOrder-Container">
             <div className="container">
@@ -48,7 +65,7 @@ const MyOrders = () => {
                                         <td>{order?.date}</td>
                                         <td><span className="status">{order?.status}</span></td>
                                         <button
-                                            // onClick={() => handleDeleteOrder(order._id)}
+                                            onClick={() => handleDeleteOrder(order._id)}
                                             className="btn btn-danger delete-btn px-3 py-2">Delete</button>
                                         <button>Update</button>
                                     </tr>

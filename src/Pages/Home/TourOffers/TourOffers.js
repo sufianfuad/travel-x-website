@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import { Spinner } from 'react-bootstrap';
 import SingleOffers from '../SingleOffers/SingleOffers';
 
 import './TourOffers.css'
 const TourOffers = () => {
-
+    // tour offer state
     const [tourOffers, setTourOffers] = useState([]);
 
     useEffect(() => {
@@ -20,14 +21,23 @@ const TourOffers = () => {
                 </div>
             </div>
             <div className="container">
-                <div className="row g-4">
-                    {
-                        tourOffers.map(offer => <SingleOffers
-                            key={offer.id}
-                            offer={offer}
-                        ></SingleOffers>)
-                    }
-                </div>
+                {
+                    tourOffers.length === 0 ?
+                        <div className="spinner">
+                            <Spinner animation="border" />
+                        </div>
+
+                        :
+                        <div className="row g-4">
+                            {
+                                tourOffers.map(offer => <SingleOffers
+                                    key={offer.id}
+                                    offer={offer}
+                                ></SingleOffers>)
+                            }
+                        </div>
+                }
+
             </div>
         </div>
     );
