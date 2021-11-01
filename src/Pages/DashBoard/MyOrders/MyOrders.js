@@ -13,7 +13,7 @@ const MyOrders = () => {
 
     useEffect(() => {
         if (user?.email) {
-            fetch('http://localhost:7000/orders')
+            fetch('https://sleepy-basin-98132.herokuapp.com/orders')
                 .then(res => res.json())
                 .then(data => setOrders(data))
         }

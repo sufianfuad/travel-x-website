@@ -21,15 +21,9 @@ const SingleOffers = ({ offer }) => {
                 </div>
                 <div className="booking-btn p-2">
                     <Link to={`/placeOrder/${_id}`}>
-                        <button className="btn btn-primary fw-bold
-                         px-3 py-2">Book Now</button>
+                        <button className="btn fw-bold
+                         px-3 py-2 book-btn">Book Now</button>
                     </Link>
-                    {/* <Link to={`/placeOrder/${_id}`}>
-                     d-flex align-items-center justify-content-between
-                        <button className="btn btn-primary fw-bold
-                         px-3 py-2">Ream More</button>
-                    </Link> */}
-
                 </div>
 
             </div>

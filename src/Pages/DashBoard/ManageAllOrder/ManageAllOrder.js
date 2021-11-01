@@ -6,7 +6,7 @@ const ManageAllOrder = () => {
     const [allOrders, setAllOrders] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:7000/orders')
+        fetch('https://sleepy-basin-98132.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => setAllOrders(data))
     }, []);
@@ -14,7 +14,7 @@ const ManageAllOrder = () => {
     const handleDeleteOrder = id => {
         const proceed = window.confirm('Are you sure, You want to delete your order')
         if (proceed) {
-            const url = `http://localhost:7000/orders/${id}`
+            const url = `https://sleepy-basin-98132.herokuapp.com/orders/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

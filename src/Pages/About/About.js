@@ -15,7 +15,7 @@ const About = () => {
             <div className="travelX-details container mt-5">
                 <div className="row">
                     <div className="col-lg-3 col-md-3 col-12">
-                        <div className="travelX-card shadow-sm">
+                        <div className="travelX-card shadow-sm m-2">
                             <div className="travelX-info p-3">
                                 <div className="travelX-logo">
                                     <img className="w-50 mb-2" src={img1} alt="" />
@@ -27,7 +27,7 @@ const About = () => {
                         </div>
                     </div>
                     <div className="col-lg-3 col-md-3 col-12">
-                        <div className="travelX-card shadow-sm">
+                        <div className="travelX-card shadow-sm m-2">
                             <div className="travelX-info p-3">
                                 <div className="travelX-logo">
                                     <img className="w-50 mb-2" src={img2} alt="" />
@@ -39,7 +39,7 @@ const About = () => {
                         </div>
                     </div>
                     <div className="col-lg-3 col-md-3 col-12">
-                        <div className="travelX-card shadow-sm">
+                        <div className="travelX-card shadow-sm m-2">
                             <div className="travelX-info p-3">
                                 <div className="travelX-logo">
                                     <img className="w-50 mb-2" src={img3} alt="" />
@@ -53,7 +53,7 @@ const About = () => {
                         </div>
                     </div>
                     <div className="col-lg-3 col-md-3 col-12">
-                        <div className="travelX-card shadow-sm">
+                        <div className="travelX-card shadow-sm m-2">
                             <div className="travelX-info p-3">
                                 <div className="travelX-logo">
                                     <img className="w-50 mb-2" src={img4} alt="" />
@@ -63,11 +63,6 @@ const About = () => {
                                         5+ year of travel experience
                                     </h4>
                                 </div>
-                                {/* <div className="mt-3">
-                                    <Link to="/">
-                                        <button className="btn btn-danger">View More</button>
-                                    </Link>
-                                </div> */}
                             </div>
                         </div>
                     </div>

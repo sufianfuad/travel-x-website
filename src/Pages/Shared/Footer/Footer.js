@@ -6,7 +6,7 @@ const Footer = () => {
         <div className="footer-container text-white">
             <div className="container">
                 <div className="row">
-                    <div className="col-md-3 col">
+                    <div className="col-lg-3 col-md-3 col-sm-12">
                         <div className="footer-menu">
                             <div>
                                 <h4>Tour Packages</h4>
@@ -23,7 +23,7 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    <div className="col-md-3 col">
+                    <div className="col-lg-3 col-md-3 col-sm-12">
                         <div className="footer-details mt-5">
                             {/* <div className="footer-logo mb-2">
 
@@ -35,11 +35,13 @@ const Footer = () => {
                                 </p>
                             </div>
                             <div>
-                                <button className="btn btn-warning px-3 py-2 mb-2">Booking Tour</button>
+                                <input className="p-1 mb-2" type="text" placeholder="Enter Your Mail" />
+                                <br />
+                                <button className="btn px-3 py-2 mb-2 book-btn">Booking Tour</button>
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-3 col">
+                    <div className="col-lg-3 col-md-3 col-sm-12">
                         <div className="footer-menu">
                             <h4>Contact Us</h4>
                             <div className="contact-info">
@@ -52,7 +54,7 @@ const Footer = () => {
 
                     </div>
 
-                    <div className="col-md-3 col">
+                    <div className="col-lg-3 col-md-3 col-sm-12">
                         <div className="footer-menu">
                             <ul>
                                 <li><a href="/home" className="menu">Home</a></li>

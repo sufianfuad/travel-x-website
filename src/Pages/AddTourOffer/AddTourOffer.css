@@ -1,13 +1,18 @@
-.add-tourOffers{
+.addTourOffers-container{
     padding: 50px 0;
+    background-color: aliceblue;
+}
+.heading{
+    color: #262339;
+    font-weight: bold;
 }
 .form-container{
     padding: 30px;
-    border: 1px solid gray;
-    box-shadow: 3px 5px 8px lightskyblue;
+    width: 500px;
+    box-shadow: 3px 5px 8px #262339 ;
     box-sizing: border-box;
     border-radius: 15px;
-    transition: 0.5s;
+    transition: 1s;
 }
 .form-container:hover{
     background-color: #f0f0f0;

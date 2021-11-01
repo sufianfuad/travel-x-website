@@ -7,7 +7,7 @@ const AddTourOffer = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data)
-        axios.post('http://localhost:7000/tourOffers', data)
+        axios.post('https://sleepy-basin-98132.herokuapp.com/tourOffers', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Successfully Added');
@@ -17,8 +17,8 @@ const AddTourOffer = () => {
     };
 
     return (
-        <div className="add-tourOffers">
-            <h2 className="text-center pb-3">Please Add Your <br />
+        <div className="addTourOffers-container">
+            <h2 className="text-center pb-3 heading">Please Add Your <br />
                 Favorite Tour Place</h2>
             <div className="form-container container">
                 <form onSubmit={handleSubmit(onSubmit)}>

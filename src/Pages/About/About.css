@@ -34,3 +34,8 @@
 .tavel-container h6{
     color: #FF7F47;
 }
+.fbLogo{
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+}

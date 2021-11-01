@@ -15,7 +15,7 @@ const PlaceOrder = () => {
     const onSubmit = data => {
         data.status = 'pending';
         console.log(data)
-        fetch('http://localhost:7000/orders', {
+        fetch('https://sleepy-basin-98132.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -33,19 +33,20 @@ const PlaceOrder = () => {
 
     // //data load
     useEffect(() => {
-        fetch(`http://localhost:7000/tourOffers/${bookingId}`)
+        fetch(`https://sleepy-basin-98132.herokuapp.com/tourOffers/${bookingId}`)
             .then(res => res.json())
             .then(data => setBookingDetails(data))
     }, []);
     return (
         <div className="placeOrder-container">
             <div className="container">
-                <h2 className="text-center">This is Booking: {bookingId}</h2>
+                <h2 className="text-center">Your Tour Package</h2>
                 <div className="row d-flex align-items-center">
                     <div className="clo-lg-6 col-md-6 col-12">
                         <div className="details-container">
                             <div className="order-box">
                                 <form onSubmit={handleSubmit(onSubmit)}>
+                                    <h5 className="title-color pb-3">Please Order</h5>
                                     <input defaultValue={user?.displayName} {...register("name", { required: true, maxLength: 20 })} placeholder="Name" />
                                     <input defaultValue={user?.email} {...register("email")} placeholder="Give your Email" />
                                     <input type="text" {...register("tour_name")} placeholder="Tour Place Name" />
@@ -69,7 +70,7 @@ const PlaceOrder = () => {
                                         <p><strong>Tour Package {bookingDetails?.TourCost}$</strong> only.</p>
                                         <p>Review : <strong>{bookingDetails?.rating}</strong> </p>
                                     </div>
-                                    <button className="btn btn-success px-3 py-2">Back Tour Offers</button>
+                                    <button className="btn book-btn fw-bold px-3 py-2">Back Tour Offers</button>
                                 </div>
                             </div>
                         </div>

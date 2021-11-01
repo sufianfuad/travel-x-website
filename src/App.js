@@ -7,7 +7,6 @@ import Header from './Pages/Shared/Header/Header';
 import Home from './Pages/Home/Home/Home';
 import TourOffers from './Pages/Home/TourOffers/TourOffers';
 import About from './Pages/About/About';
-import Contact from './Pages/Contact/Contact';
 import Login from './Pages/Login/Login/Login';
 import SignIn from './Pages/SignIn/SignIn';
 import NotFound from './Pages/NotFound/NotFound';
