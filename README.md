@@ -1,68 +1,10 @@
-const tourOffer = [
-        {
-            id: 101,
-            name: "Paris Hill Tour",
-            TourCost: "2000",
-            rating: "1.2K+Rating",
-            image: "https://i.ibb.co/X4VGKDr/p-01.jpg",
-            description: "Adventure may hurt you but monotony will kill you.",
-        },
-        {
-            id: 102,
-            name: "Lake Ganda, Spain",
-            TourCost: "1200",
-            rating: "1.6K+Rating",
-            image: "https://i.ibb.co/DWxyKvN/p-2.png",
-            description: "Better to see something once than hear about it a thousand times.",
-        },
-        {
-            id: 103,
-            name: "Fench Rivira, Italy",
-            TourCost: "1400",
-            rating: "1.3K+Rating",
-            image: "https://i.ibb.co/7br0rMZ/p-3.jpg",
-            description: "Traveling – it leaves you speechless, then turns you into a storyteller.",
-        },
-        {
-            id: 104,
-            name: "Bali, Indonesia",
-            TourCost: "900",
-            rating: "1.2K+Rating",
-            image: "https://i.ibb.co/s3q4X58/p-4.jpg",
-            description: " “To Travel is to Live” – Hans Christian Andersen",
-        },
-        {
-            id: 105,
-            name: "Kashmir,Pakistan",
-            TourCost: "1200",
-            rating: "1.5K+Rating",
-            image: "https://i.ibb.co/Cs3kDQ4/p-5.jpg",
-            description: "Work, Travel, Save, Repeat.",
-        },
-        {
-            id: 106,
-            name: "Switzerland Tour",
-            TourCost: "1500",
+## Welcome to my "=> Travel Explore Agency <="
+ My Live Site Link (https://travel-explore-26ff7.web.app/)
 
-            rating: "1.4K+Rating",
-            image: "https://i.ibb.co/zHLmQKm/p-6.jpg",
-            description: "Life is short and the world is wide.",
-        },
-        {
-            id: 107,
-            name: "Mount Everest, Nepal",
-            TourCost: "1700",
-            rating: "1.3K+Rating",
-            image: "https://i.ibb.co/HqJk6Dy/p-7.jpg",
-            description: "Dare to live the life you’ve always wanted.",
-        },
-        {
-            id: 108,
-            name: "Niagara falls, Canada",
-            TourCost: "2500",
-            rating: "1.4K+Rating",
-            image: "https://i.ibb.co/Sf55nvp/p-8.jpg",
-            description: "Travel and change of place impart new vigor to the mind. – Seneca",
-        },
 
-    ]
+ ## The Purpose of my website are :
+ ## An Authorized User Can Access This Website.They can Registration with Goggle.
+ ## In the home page they can see our tour package and other details.
+ ## If an user want to booking any package they can place the order. And after they can see their own orders in protected My Order route. They can delete and update order.
+ ## Also they can see All orders of other users. Here they can delete and update. Then their Order show them Pending, when they click update and their pending status approved.
+ ## Users can add new travel package if they want.
