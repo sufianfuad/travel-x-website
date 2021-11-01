@@ -14,6 +14,7 @@ const About = () => {
             <h2 className="text-center mt-3 fw-bold travel-title">Why You Are Travel With TravelX</h2>
             <div className="travelX-details container mt-5">
                 <div className="row">
+                    {/* travelX agency about */}
                     <div className="col-lg-3 col-md-3 col-12">
                         <div className="travelX-card shadow-sm m-2">
                             <div className="travelX-info p-3">

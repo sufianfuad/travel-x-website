@@ -2,10 +2,9 @@ import React from 'react';
 //css
 import './LatestBlogs.css';
 //image
-import pic1 from '../../images/blogs/pic1.jpg'
-import pic2 from '../../images/blogs/pic2.jpg'
-import pic3 from '../../images/blogs/pic3.jpg'
-import pic4 from '../../images/blogs/pic4.jpg'
+import pic1 from '../../images/blogs/pic1.jpg';
+import pic2 from '../../images/blogs/pic2.jpg';
+import pic4 from '../../images/blogs/pic4.jpg';
 const LatestBlogs = () => {
     return (
         <div className="blog-container">
@@ -13,6 +12,7 @@ const LatestBlogs = () => {
                 <h6 className="text-center fw-bold title-color"> Latest Blog</h6>
                 <h2 className="text-center mt-3 fw-bold travel-title mb-3">Stay Updated And New Post Our Blog</h2>
                 <div className="row row-cols-1 row-cols-md-3 g-4 mt-3">
+                    {/* travelX blogs */}
                     <div className="col">
                         <div className="card h-100">
                             <img src={pic1} className="card-img-top" alt="..." />

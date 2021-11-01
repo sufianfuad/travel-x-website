@@ -35,6 +35,7 @@ const ManageAllOrder = () => {
             <div className="container">
                 <h2 className="allOrder-title pb-3">Your Orders Available: {allOrders.length}</h2>
                 <div className="allOrder-table">
+                    {/* all order list */}
                     <Table striped bordered hover>
                         <thead>
                             <tr>

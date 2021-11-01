@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 
 import './PlaceOrder.css';
@@ -7,7 +7,7 @@ import useAuth from '../../hooks/useAuth';
 const PlaceOrder = () => {
     const { bookingId } = useParams();
     const { user } = useAuth();
-
+    //place order state
     const [bookingDetails, setBookingDetails] = useState([]);
     // const [order, setOrder] = useState({});
 
@@ -47,11 +47,17 @@ const PlaceOrder = () => {
                             <div className="order-box">
                                 <form onSubmit={handleSubmit(onSubmit)}>
                                     <h5 className="title-color pb-3">Please Order</h5>
-                                    <input defaultValue={user?.displayName} {...register("name", { required: true, maxLength: 20 })} placeholder="Name" />
-                                    <input defaultValue={user?.email} {...register("email")} placeholder="Give your Email" />
-                                    <input type="text" {...register("tour_name")} placeholder="Tour Place Name" />
-                                    <input {...register("date")} type="date" />
-                                    <input type="text" {...register("Address")} placeholder="Address" />
+                                    {/* input fields */}
+                                    <input
+                                        defaultValue={user?.displayName} {...register("name", { required: true, maxLength: 20 })} placeholder="Name" />
+                                    <input
+                                        defaultValue={user?.email} {...register("email")} placeholder="Give your Email" />
+                                    <input
+                                        type="text" {...register("tour_name")} placeholder="Tour Place Name" />
+                                    <input
+                                        {...register("date")} type="date" />
+                                    <input
+                                        type="text" {...register("Address")} placeholder="Address" />
                                     <input type="submit" value="Place Order" />
                                 </form>
                             </div>
@@ -70,7 +76,10 @@ const PlaceOrder = () => {
                                         <p><strong>Tour Package {bookingDetails?.TourCost}$</strong> only.</p>
                                         <p>Review : <strong>{bookingDetails?.rating}</strong> </p>
                                     </div>
-                                    <button className="btn book-btn fw-bold px-3 py-2">Back Tour Offers</button>
+                                    <Link to="/tourOffers">
+                                        <button className="btn book-btn fw-bold px-3 py-2">Back Tour Offers</button>
+                                    </Link>
+
                                 </div>
                             </div>
                         </div>

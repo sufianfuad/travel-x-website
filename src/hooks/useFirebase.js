@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import initializeAuthentication from "../Pages/Login/Firebase/firebase.init";
 
-
+// from google firebase
 import {
     getAuth,
     signInWithPopup,

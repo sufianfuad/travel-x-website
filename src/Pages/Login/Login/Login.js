@@ -1,7 +1,10 @@
 import React from 'react';
 import { useLocation, useHistory } from 'react-router-dom';
+// useAuth
 import useAuth from '../../../hooks/useAuth';
-import googleLogo from '../../../images/logo/google.png'
+//logo image
+import googleLogo from '../../../images/logo/google.png';
+//css
 import './Login.css'
 const Login = () => {
 
@@ -10,7 +13,7 @@ const Login = () => {
     //for redirect
     const location = useLocation();
     const history = useHistory();
-
+    //Redirect
     const redirect_uri = location.state?.from || '/';
 
     const handleGoogleSignIn = () => {

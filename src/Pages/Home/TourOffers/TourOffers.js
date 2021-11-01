@@ -21,6 +21,7 @@ const TourOffers = () => {
                 </div>
             </div>
             <div className="container">
+                {/* spinner loading */}
                 {
                     tourOffers.length === 0 ?
                         <div className="spinner">

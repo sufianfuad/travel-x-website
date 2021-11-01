@@ -10,6 +10,7 @@ const Footer = () => {
                         <div className="footer-menu">
                             <div>
                                 <h4>Tour Packages</h4>
+                                {/* package lists */}
                                 <ul>
                                     <li><a href="/home" className="menu">Paris Hill Tower</a></li>
                                     <li><a href="/home" className="menu">Late Ganda</a></li>
@@ -42,6 +43,7 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="col-lg-3 col-md-3 col-sm-12">
+                        {/* footer contact */}
                         <div className="footer-menu">
                             <h4>Contact Us</h4>
                             <div className="contact-info">
@@ -55,6 +57,7 @@ const Footer = () => {
                     </div>
 
                     <div className="col-lg-3 col-md-3 col-sm-12">
+                        {/* footer menus */}
                         <div className="footer-menu">
                             <ul>
                                 <li><a href="/home" className="menu">Home</a></li>
@@ -62,7 +65,7 @@ const Footer = () => {
                                 <li><a href="/home" className="menu">Manage All Orders</a></li>
                                 <li><a href="/home" className="menu">Add Tour Package</a></li>
                                 <li><a href="/home" className="menu">About</a></li>
-                                <li><a href="/home" className="menu">Contact</a></li>
+                                <li><a href="/home" className="menu">Blogs</a></li>
                             </ul>
                         </div>
                     </div>

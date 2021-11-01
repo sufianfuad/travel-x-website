@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
 import { useParams } from 'react-router';
+import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import './MyOrders.css';
 
 
 const MyOrders = () => {
     const { user } = useAuth();
-
+    //Order state
     const [orders, setOrders] = useState([]);
-
 
     useEffect(() => {
         fetch('https://sleepy-basin-98132.herokuapp.com/orders')
@@ -42,7 +42,7 @@ const MyOrders = () => {
                 <h2 className="text-center pb-3">My Orders Here: {orders.length}</h2>
                 {user.email &&
                     <div className="pb-3">
-
+                        {/* my order list in a table */}
                         <Table striped bordered hover>
                             <thead>
                                 <tr>
@@ -67,7 +67,12 @@ const MyOrders = () => {
                                         <button
                                             onClick={() => handleDeleteOrder(order._id)}
                                             className="btn btn-danger delete-btn px-3 py-2">Delete</button>
-                                        <button>Update</button>
+                                        <Link to={`/orders/update/${order._id}`}>
+                                            <button
+                                                onClick=""
+                                                className="btn btn-danger delete-btn px-3 py-2">Update</button>
+                                        </Link>
+
                                     </tr>
                                 </tbody>
                             ))}

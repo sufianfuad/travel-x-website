@@ -1,4 +1,5 @@
 import React from 'react';
+//react font awesome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
@@ -13,6 +14,7 @@ const SingleOffers = ({ offer }) => {
                 <div className="offer-img">
                     <img src={image} alt="" />
                 </div>
+                {/* travel Offers info */}
                 <div className="offer-info">
                     <h4>{name}</h4>
                     <p><span className="tour-cost">Package ${TourCost}</span></p>
