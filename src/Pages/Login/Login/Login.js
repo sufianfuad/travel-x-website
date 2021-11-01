@@ -1,7 +1,7 @@
 import React from 'react';
 import { useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
-
+import googleLogo from '../../../images/logo/google.png'
 import './Login.css'
 const Login = () => {
 
@@ -21,11 +21,16 @@ const Login = () => {
     }
     return (
         <div className="login-container">
-            <h2 className="text-center">Please Login</h2>
-            <div className="text-center">
-                <button
-                    onClick={handleGoogleSignIn}
-                    className=" btn btn-warning">Sign In With Google</button>
+            <div className="login-info p-3">
+                <h2 className="text-center">Please Login</h2>
+                <div className="ggl-logo p-2">
+                    <img src={googleLogo} alt="" />
+                </div>
+                <div className="mt-2">
+                    <button
+                        onClick={handleGoogleSignIn}
+                        className=" btn login-btn px-3 py-2">Sign In With Google</button>
+                </div>
             </div>
 
         </div>

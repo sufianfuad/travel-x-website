@@ -1,3 +1,37 @@
 .login-container{
+    background-image: url('https://dynamic.com.bd/public/assets/img/home.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
     padding: 50px 0;
+    height: 80vh;
+
+}
+.login-info{
+    margin: 0 auto;
+    padding: 30px 0;
+    width: 400px;
+    height: 300px;
+    text-align: center;
+    background-color: aliceblue;
+    box-shadow: 3px 3px 10px gray;
+    border-radius: 0 30px;
+}
+.login-info h2{
+    color: #FF7F47;
+    font-weight: bolder;
+}
+.login-btn{
+    font-size: 16px;
+    font-weight: bold;
+    color: aliceblue;
+    background-color: #262339;
+}
+.login-btn:hover{
+    color: #FF7F47;
+}
+.ggl-logo img{
+    width: 100px;
+    border-radius: 50px;
 }

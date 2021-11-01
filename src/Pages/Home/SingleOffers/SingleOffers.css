@@ -5,10 +5,10 @@
     height: 470px;
     width: 300px;
     margin:10px;
-    /* border-radius: 15px; */
+    border-radius: 15px 0;
     box-shadow: 3px 6px 10px lightgray ;
     transition: 0.5s;
-    /* background-color: #f0f0f0; */
+    background-color: #f0f0f0;
 }
 .offer-img img{
     width:100%;
@@ -17,4 +17,10 @@
 .offer-info{
     /* text-align: left; */
     padding: 5px;
+}
+.tour-cost{
+    color: #383838;
+}
+.rating-color{
+    color: tomato;
 }

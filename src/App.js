@@ -20,6 +20,7 @@ import MyOrders from './Pages/DashBoard/MyOrders/MyOrders';
 import ManageAllOrder from './Pages/DashBoard/ManageAllOrder/ManageAllOrder'
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import UpdateOrder from './Pages/DashBoard/UpdateOrder/UpdateOrder';
 
 
 function App() {
@@ -69,6 +70,9 @@ function App() {
             </Route>
             <Route path="/signin">
               <SignIn></SignIn>
+            </Route>
+            <Route path="/orders/update/:id">
+              <UpdateOrder></UpdateOrder>
             </Route>
             <Route path="*">
               <NotFound></NotFound>

@@ -3,3 +3,30 @@
     height: 40px;
     border-radius: 100%;
 }
+.navbar{
+    background-color: #f0f0f0;
+    box-shadow: 5px 5px 5px lightgray;
+}
+.title-color{
+    color: #FF7F47;
+}
+.items{
+    color: #262339;
+    font-size: 18px;
+    font-weight: bold;
+}
+.menu-logo img{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+}
+.nav-color{
+    color: #262339;
+}
+.p-color{
+    color: #262339;
+}
+.user{
+    font-weight: bold;
+    color: black;
+}

@@ -1,11 +1,15 @@
 .allOrder-container{
     padding: 50px 0;
 }
+.allOrder-title{
+    text-align: left;
+    color: #262339; 
+}
 .delete-btn{
     color: #fff;
     font-weight: bold;
     background-color: darkcyan;
 }
 .status{
-    color: crimson;
+    color: #FF7F47;
 }
